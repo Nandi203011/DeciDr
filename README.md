@@ -204,10 +204,4 @@ Full interactive docs at `http://localhost:8000/docs`
 
 ---
 
-## License
 
-MIT License — see [LICENSE](LICENSE) for details.
-
----
-
-*Built as part of a research project exploring computational implementations of behavioral psychology in personal decision support systems.*
