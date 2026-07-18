@@ -1,0 +1,38 @@
+# ============================================================
+# DeciDr — Backend Dependencies
+# Psychology-backed personal decision engine
+# All versions pinned for security (prevents supply chain attacks)
+# Run: pip install -r requirements.txt
+# ============================================================
+
+# --- Web Framework ---
+fastapi==0.111.0          # API framework
+uvicorn==0.30.1           # ASGI server to run FastAPI
+
+# --- Data Validation ---
+pydantic==2.7.4           # Input validation and data modeling
+pydantic-settings==2.3.4  # For loading .env settings into Pydantic models
+
+# --- Database ---
+sqlalchemy==2.0.31        # ORM — we never write raw SQL (security)
+aiosqlite==0.20.0         # Async SQLite driver
+
+# --- Environment Variables ---
+python-dotenv==1.0.1      # Loads .env file safely — never hardcode secrets
+
+# --- AI Narrative Layer (Groq — free, runs Llama 3) ---
+groq==0.9.0               # Groq API client
+
+# --- Security & Rate Limiting ---
+slowapi==0.1.9            # Rate limiting for FastAPI endpoints
+limits==3.12.0            # Required by slowapi
+
+# --- HTTP Security Headers ---
+secure==0.3.0             # Adds security headers to all responses
+
+# --- Logging (structured, safe — no PII logged) ---
+loguru==0.7.2             # Clean structured logging
+
+# --- Testing ---
+pytest==8.2.2             # Testing framework
+httpx==0.27.0             # Required for FastAPI test client

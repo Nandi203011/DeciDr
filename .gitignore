@@ -1,0 +1,66 @@
+# ============================================================
+# .gitignore — DeciDr
+# CRITICAL: .env must NEVER be pushed to GitHub
+# ============================================================
+
+# --- SECRETS (most important) ---
+.env
+.env.local
+.env.production
+*.key
+*.pem
+secrets/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+venv/
+env/
+ENV/
+.venv/
+
+# --- Database ---
+*.db
+*.sqlite
+*.sqlite3
+
+# --- Logs ---
+*.log
+logs/
+
+# --- IDE ---
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# --- Testing ---
+.pytest_cache/
+.coverage
+htmlcov/
+
+# --- Node (frontend) ---
+node_modules/
+.next/
+npm-debug.log*
+
+
+# --- Stray folders at root (belong inside backend/) ---
+api/
+models/
+utils/
+
+# --- Claude internal files ---
+AGENTS.md
+CLAUDE.md
+frontend/AGENTS.md
+frontend/CLAUDE.md
