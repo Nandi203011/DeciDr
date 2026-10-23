@@ -65,7 +65,8 @@ class DecisionNarrator:
     def __init__(self):
         settings = get_settings()
         self.client = Groq(api_key=settings.groq_api_key)
-        self.model = "llama-3.3-70b-versatile" # Free Groq model — Llama 3 8B
+        self.model = settings.groq_model
+        # Free Groq model — Llama 3 8B
         logger.info(f"DecisionNarrator initialized | model={self.model}")
 
     def generate(self, result: DecisionResult, question: str) -> str:

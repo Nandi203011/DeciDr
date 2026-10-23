@@ -32,7 +32,7 @@ class WebSearchEngine:
         settings = get_settings()
         self.tavily = TavilyClient(api_key=settings.tavily_api_key)
         self.groq = Groq(api_key=settings.groq_api_key)
-        self.model = "llama-3.3-70b-versatile"
+        self.model = settings.groq_model
         logger.info("WebSearchEngine initialized")
 
     def should_search(self, question: str, options: list) -> bool:

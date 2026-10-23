@@ -27,7 +27,10 @@ class Settings(BaseSettings):
     groq_api_key: str = Field(
         description="Groq API key — get free at console.groq.com"
     )
-
+    groq_model: str = Field(
+        default="openai/gpt-oss-120b",
+        description="Groq model ID. See console.groq.com/docs/deprecations"
+    )
     # --- Tavily Web Search ---
     tavily_api_key: str = Field(
         default="",description="Tavily API key for web search — get free at tavily.com"

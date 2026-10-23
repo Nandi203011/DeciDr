@@ -71,7 +71,7 @@ class DecisionParser:
     def __init__(self):
         settings = get_settings()
         self.client = Groq(api_key=settings.groq_api_key)
-        self.model = "llama-3.3-70b-versatile"
+        self.model = settings.groq_model
         logger.info(f"DecisionParser initialized | model={self.model}")
 
     def parse(self, user_text: str) -> dict:
